@@ -11,15 +11,19 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.01em; }
         h1, h2 { font-family: 'Outfit', sans-serif; }
         .hero-gradient { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); }
-        /* The container sets the physical space on the page */
+        
+        /* The container sets the physical space and ensures centering */
         .cv-container { 
-            height: 1000px; 
+            height: 1100px; /* Increased height for better viewing */
             width: 100%; 
-            border-radius: 1.5rem; 
+            max-width: 900px; /* Standard width for a centered document */
+            border-radius: 1rem; 
             overflow: hidden; 
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); 
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); 
             border: 1px solid #e2e8f0; 
-            background-color: #f8fafc;
+            background-color: #ffffff;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -39,16 +43,9 @@
 
     <header class="hero-gradient py-16 px-6 border-b border-slate-50 text-center">
         <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Curriculum Vitae</h1>
-        <div class="flex justify-center gap-4">
-            <a href="https://docs.google.com/document/d/1vQClq1fgWBz6lp1jelq2LYx3V6d9BnopOy9O_Kc7Q/export?format=pdf" 
-               target="_blank"
-               class="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-500/20">
-                <i class="fa-solid fa-file-pdf"></i> Download PDF
-            </a>
-        </div>
     </header>
 
-    <main class="py-12 max-w-5xl mx-auto px-6">
+    <main class="py-12 max-w-7xl mx-auto px-6">
         <div class="cv-container">
             <iframe 
                 src="https://docs.google.com/document/d/e/2PACX-1vQClq1fgWBz6lp1jelq2LYx3V6d9BnopOy9O_Kc7Q90V0Q-cadDK63WCjJxvkN9vn7ceK9E5yALDkhr/pub?embedded=true"
