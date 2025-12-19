@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Rui Tammy Huang, Ph.D.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.01em; }
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); }
+        
+        /* Filter Button Active State */
+        .filter-btn.active {
+            background-color: #3b82f6;
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="text-slate-700 bg-white">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tight text-slate-900">Rui Tammy Huang, <span class="text-blue-600">Ph.D.</span></a>
+            <div class="space-x-8 font-semibold text-xs uppercase tracking-widest">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="portfolio.html" class="text-blue-600">Portfolio</a>
+                <a href="index.html#research" class="hover:text-blue-600 transition">Research</a>
+                <a href="resume.html" class="hover:text-blue-600 transition">CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient py-16 px-6 border-b border-slate-50 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Selected Works</h1>
+        <p class="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+            Exploring the intersection of Human-Centered Design, Immersive Learning, and AI in Computer Science Education.
+        </p>
+    </header>
+
+    <main class="py-16 max-w-6xl mx-auto px-6">
+        
+        <div class="flex flex-wrap justify-center gap-3 mb-16">
+            <button class="filter-btn active px-6 py-2 rounded-full text-sm font-bold border border-slate-200 transition" onclick="filterSelection('all')">All Projects</button>
+            <button class="filter-btn px-6 py-2 rounded-full text-sm font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('xr')">Immersive Tech (XR)</button>
+            <button class="filter-btn px-6 py-2 rounded-full text-sm font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('games')">Game-Based Learning</button>
+            <button class="filter-btn px-6 py-2 rounded-full text-sm font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('cs-ed')">CS Education</button>
+            <button class="filter-btn px-6 py-2 rounded-full text-sm font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('research')">Meta-Analysis</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="project-card xr all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
+                <img src="images/Phoenix_Gathering.png" alt="Project PHOENIX" class="h-56 w-full object-cover">
+                <div class="p-8">
+                    <span class="text-blue-600 font-bold text-[10px] uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Extended Reality</span>
+                    <h3 class="text-xl font-bold mt-5 mb-3 text-slate-900">Project PHOENIX</h3>
+                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">Co-designing virtual reality environments specifically for and with autistic users.</p>
+                    <a href="#" class="text-blue-600 text-sm font-bold hover:underline">View Case Study →</a>
+                </div>
+            </div>
+
+            <div class="project-card games all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
+                <img src="images/Future_Writers_2_FutureLand.png" alt="Future Writers" class="h-56 w-full object-cover">
+                <div class="p-8">
+                    <span class="text-teal-600 font-bold text-[10px] uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-full">Games</span>
+                    <h3 class="text-xl font-bold mt-5 mb-3 text-slate-900">Future Writers</h3>
+                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">3D DGBL2L environment fostering language-related episodes for ELL learners.</p>
+                    <a href="#" class="text-teal-600 text-sm font-bold hover:underline">View Case Study →</a>
+                </div>
+            </div>
+
+            <div class="project-card cs-ed all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
+                <img src="images/CS_Differentiated_Learning.png" alt="CS Ed" class="h-56 w-full object-cover">
+                <div class="p-8">
+                    <span class="text-rose-600 font-bold text-[10px] uppercase tracking-widest bg-rose-50 px-3 py-1 rounded-full">CS Education</span>
+                    <h3 class="text-xl font-bold mt-5 mb-3 text-slate-900">Differentiated CS Learning</h3>
+                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">Evidence-based tiered instructional design for computer science practitioners.</p>
+                    <a href="#" class="text-rose-600 text-sm font-bold hover:underline">Read Research →</a>
+                </div>
+            </div>
+
+            <div class="project-card research all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
+                <div class="h-56 bg-slate-100 flex items-center justify-center p-6">
+                    <i class="fa-solid fa-chart-line text-5xl text-blue-200"></i>
+                </div>
+                <div class="p-8">
+                    <span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest bg-slate-100 px-3 py-1 rounded-full">Meta-Analysis</span>
+                    <h3 class="text-xl font-bold mt-5 mb-3 text-slate-900">Gamification Outcomes</h3>
+                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">Synthesis of evidence on student learning outcomes in formal educational settings.</p>
+                    <a href="#" class="text-slate-600 text-sm font-bold hover:underline">Read Publication →</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-16 px-6 border-t border-slate-100 bg-white">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center">
+            <p class="text-xs text-slate-400 font-bold uppercase tracking-[0.2em]">© 2025 Rui Tammy Huang, Ph.D.</p>
+            <div class="flex gap-10 text-xl text-slate-300">
+                <a href="https://www.linkedin.com/in/rui-tammy-huang-367384b2" target="_blank" class="hover:text-blue-600 transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/rui.tammy.huang" target="_blank" class="hover:text-blue-600 transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="mailto:rui.huang@coe.ufl.edu" class="hover:text-blue-600 transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("project-card");
+            if (c == "all") c = "all";
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+                if (x[i].className.indexOf(c) > -1) {
+                    x[i].style.display = "block";
+                }
+            }
+            
+            // Toggle active button style
+            var btns = document.getElementsByClassName("filter-btn");
+            for (var j = 0; j < btns.length; j++) {
+                btns[j].classList.remove("active");
+            }
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
