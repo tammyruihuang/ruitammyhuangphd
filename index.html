@@ -6,20 +6,30 @@
     <title>Rui Tammy Huang, Ph.D. | Educational Technology & Computer Science Education</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2 { font-family: 'Playfair Display', serif; }
-        .hero-gradient { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
-        .accent-border { border-left: 4px solid #2563eb; }
+        /* Body font with softer edges */
+        body { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.01em; }
+        /* Heading font that is modern but less sharp than traditional serifs */
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+        
+        .hero-gradient { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); }
+        .accent-border { border-left: 4px solid #3b82f6; border-radius: 2px; }
+        
+        /* Adjusting H1 for two-row fit */
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3.25rem); /* Responsive sizing */
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
     </style>
 </head>
-<body class="text-slate-800 bg-white">
+<body class="text-slate-700 bg-white">
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-tight">Rui Tammy Huang, <span class="text-blue-600">Ph.D.</span></span>
-            <div class="space-x-8 font-medium text-sm uppercase tracking-widest">
+            <span class="text-xl font-bold tracking-tight text-slate-900">Rui Tammy Huang, <span class="text-blue-600">Ph.D.</span></span>
+            <div class="space-x-8 font-semibold text-xs uppercase tracking-widest">
                 <a href="#home" class="hover:text-blue-600 transition">Home</a>
                 <a href="#portfolio" class="hover:text-blue-600 transition">Portfolio</a>
                 <a href="#research" class="hover:text-blue-600 transition">Research</a>
@@ -28,25 +38,24 @@
         </div>
     </nav>
 
-    <section id="home" class="hero-gradient py-20 px-6 border-b border-slate-100">
+    <section id="home" class="hero-gradient py-20 px-6 border-b border-slate-50">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/3">
-                <img src="images/Huang_Headshot_300x300.jpg" alt="Rui Tammy Huang" class="rounded-2xl shadow-2xl w-full object-cover aspect-square transition duration-500 hover:scale-105">
+                <img src="images/Huang_Headshot_300x300.jpg" alt="Rui Tammy Huang" class="rounded-3xl shadow-xl w-full object-cover aspect-square transition duration-500 hover:scale-[1.02]">
             </div>
             <div class="md:w-2/3 text-center md:text-left">
-                <h1 class="text-5xl md:text-6xl mb-6 text-slate-900 leading-tight">Empower Learners with AI and Advanced Learning Technology</h1>
-                <p class="text-xl text-slate-600 mb-8 leading-relaxed">
-                    Clinical Assistant Professor Program Coordinator for Computer Science Education at the University of Florida. 
+                <h1 class="hero-title font-bold mb-6 text-slate-900">Empower Learners with AI and Advanced Learning Technology</h1>
+                <p class="text-lg text-slate-500 mb-4 leading-relaxed font-medium">
+                    Clinical Assistant Professor & Program Coordinator for Computer Science Education at the University of Florida. 
                 </p>
-                <p class="text-xl text-slate-600 mb-8 leading-relaxed">
-                    I design, evaluate, and synthesize evidence on technology-enhanced learning solutions (e.g., AI-mediated, learning experience design–driven) 
-                    to improve learning and implementation in higher education and K–12 settings.
+                <p class="text-lg text-slate-500 mb-10 leading-relaxed">
+                    I design, evaluate, and synthesize evidence on technology-enhanced learning solutions to improve implementation in higher education and K–12 settings.
                 </p>
-                <div class="flex flex-wrap items-center justify-center md:justify-start gap-6">
-                    <a href="#portfolio" class="bg-blue-600 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">View Portfolio</a>
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-8">
+                    <a href="#portfolio" class="bg-blue-600 text-white px-9 py-4 rounded-2xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">View Portfolio</a>
                     
-                    <div class="flex gap-5 text-2xl text-slate-500">
-                        <a href="www.linkedin.com/in/rui-tammy-huang-367384b2" target="_blank" class="hover:text-blue-600 transition" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <div class="flex gap-6 text-2xl text-slate-400">
+                        <a href="https://www.linkedin.com/in/rui-tammy-huang-367384b2" target="_blank" class="hover:text-blue-600 transition" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.facebook.com/rui.tammy.huang" target="_blank" class="hover:text-blue-600 transition" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
                         <a href="mailto:rui.huang@coe.ufl.edu" class="hover:text-blue-600 transition" title="Email"><i class="fa-solid fa-envelope"></i></a>
                     </div>
@@ -56,82 +65,80 @@
     </section>
 
     <section class="py-24 max-w-6xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div class="accent-border pl-6">
-                <i class="fa-solid fa-users-viewfinder text-3xl text-blue-600 mb-4"></i>
-                <h3 class="font-bold text-lg mb-2 text-slate-900">Human-Centered Learning Experience Design</h3>
-                <p class="text-sm text-slate-500">Integrating sociocultural, technological, and pedagogical dimensions into design.</p>
+                <i class="fa-solid fa-users-viewfinder text-3xl text-blue-500 mb-5 block"></i>
+                <h3 class="font-bold text-lg mb-3 text-slate-900">Human-Centered LXD</h3>
+                <p class="text-sm leading-relaxed text-slate-500">Integrating sociocultural, technological, and pedagogical dimensions into design.</p>
             </div>
             <div class="accent-border pl-6">
-                <i class="fa-solid fa-vr-cardboard text-3xl text-blue-600 mb-4"></i>
-                <h3 class="font-bold text-lg mb-2 text-slate-900">Immersive Tech</h3>
-                <p class="text-sm text-slate-500">Designing VR environments (Project PHOENIX) for autistic and neurodiverse learners.</p>
+                <i class="fa-solid fa-vr-cardboard text-3xl text-blue-500 mb-5 block"></i>
+                <h3 class="font-bold text-lg mb-3 text-slate-900">Immersive Tech</h3>
+                <p class="text-sm leading-relaxed text-slate-500">Designing VR environments for autistic and neurodiverse learners.</p>
             </div>
             <div class="accent-border pl-6">
-                <i class="fa-solid fa-microchip text-3xl text-blue-600 mb-4"></i>
-                <h3 class="font-bold text-lg mb-2 text-slate-900">AI-Mediated Learning</h3>
-                <p class="text-sm text-slate-500">Personalizing learning through AI literacy and generative AI tools.</p>
+                <i class="fa-solid fa-microchip text-3xl text-blue-500 mb-5 block"></i>
+                <h3 class="font-bold text-lg mb-3 text-slate-900">AI-Mediated Learning</h3>
+                <p class="text-sm leading-relaxed text-slate-500">Personalizing learning through AI literacy and generative AI tools.</p>
             </div>
             <div class="accent-border pl-6">
-                <i class="fa-solid fa-graduation-cap text-3xl text-blue-600 mb-4"></i>
-                <h3 class="font-bold text-lg mb-2 text-slate-900">Broadening CS Ed</h3>
-                <p class="text-sm text-slate-500">Preparing CS teachers at all levels to broaden CS education.</p>
+                <i class="fa-solid fa-graduation-cap text-3xl text-blue-500 mb-5 block"></i>
+                <h3 class="font-bold text-lg mb-3 text-slate-900">Broadening CS Ed</h3>
+                <p class="text-sm leading-relaxed text-slate-500">Preparing CS teachers at all levels to broaden computer science education.</p>
             </div>
         </div>
     </section>
 
-    <section id="portfolio" class="py-20 bg-slate-50 px-6">
+    <section id="portfolio" class="py-24 bg-slate-50/50 px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-                <div>
-                    <h2 class="text-4xl mb-4 text-slate-900">Featured Research Projects</h2>
-                    <p class="text-slate-500">Iterative design and evidence-based development of learning technologies.</p>
-                </div>
+            <div class="mb-14">
+                <h2 class="text-3xl font-bold mb-3 text-slate-900">Featured Research Projects</h2>
+                <p class="text-slate-500 font-medium">Iterative design and evidence-based development.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100">
-                    <div class="h-56 bg-slate-200 overflow-hidden relative">
-                        <img src="images/Phoenix_Gathering.png" alt="Project Phoenix" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-blue-500/5 transition-all group border border-slate-100">
+                    <div class="h-60 bg-slate-100 overflow-hidden">
+                        <img src="images/Phoenix_Gathering.png" alt="Project Phoenix" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <span class="text-blue-600 font-bold text-[10px] uppercase tracking-widest border border-blue-200 px-2 py-1 rounded">Extended Reality (XR)</span>
-                        <h3 class="text-xl font-bold mt-4 mb-2 text-slate-900">Project PHoENIX</h3>
-                        <p class="text-sm text-slate-600 line-clamp-3 italic">Empowering autistic users through participatory co-design of inclusive XR spaces.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100">
-                    <div class="h-56 bg-slate-200 overflow-hidden relative">
-                        <img src="images/Future_Writers_2_FutureLand.png" alt="Future Writers" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-teal-600 font-bold text-[10px] uppercase tracking-widest border border-teal-200 px-2 py-1 rounded">Game-Based Learning</span>
-                        <h3 class="text-xl font-bold mt-4 mb-2 text-slate-900">Future Writers (DGBL2L)</h3>
-                        <p class="text-sm text-slate-600 line-clamp-3 italic">A 3D virtual world designed to foster language-related episodes for English Language Learners.</p>
+                    <div class="p-8">
+                        <span class="text-blue-600 font-bold text-[10px] uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Extended Reality (XR)</span>
+                        <h3 class="text-xl font-bold mt-5 mb-3 text-slate-900">Project PHOENIX</h3>
+                        <p class="text-sm leading-relaxed text-slate-500 italic font-medium leading-relaxed">Empowering autistic users through participatory co-design of inclusive XR spaces.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100">
-                    <div class="h-56 bg-slate-200 overflow-hidden relative">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/xwubDrPa7Ms" title="Research Narrative" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-teal-500/5 transition-all group border border-slate-100">
+                    <div class="h-60 bg-slate-100 overflow-hidden">
+                        <img src="images/Future_Writers_2_FutureLand.png" alt="Future Writers" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <span class="text-rose-600 font-bold text-[10px] uppercase tracking-widest border border-rose-200 px-2 py-1 rounded">User Narrative</span>
-                        <h3 class="text-xl font-bold mt-4 mb-2 text-slate-900">Differentiated Learning Spotlight</h3>
-                        <p class="text-sm text-slate-600 line-clamp-3 italic">A multi-tiered instructional design approach in computer science education that supports learners’ diverse prior knowledge, experiences, and contexts.</p>
+                    <div class="p-8">
+                        <span class="text-teal-600 font-bold text-[10px] uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-full">Game-Based Learning</span>
+                        <h3 class="text-xl font-bold mt-5 mb-3 text-slate-900">Future Writers (DGBL2L)</h3>
+                        <p class="text-sm leading-relaxed text-slate-500 italic font-medium leading-relaxed">A 3D virtual world designed to foster language-related episodes for English Language Learners.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-rose-500/5 transition-all group border border-slate-100">
+                    <div class="h-60 bg-slate-100 overflow-hidden">
+                        <img src="images/CS_Differentiated_Learning.png" alt="Differentiated Learning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-8">
+                        <span class="text-rose-600 font-bold text-[10px] uppercase tracking-widest bg-rose-50 px-3 py-1 rounded-full">User Narrative</span>
+                        <h3 class="text-xl font-bold mt-5 mb-3 text-slate-900">Differentiated Learning</h3>
+                        <p class="text-sm leading-relaxed text-slate-500 italic font-medium leading-relaxed">A multi-tiered instructional design approach supporting learners’ diverse prior knowledge and contexts.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 px-6 border-t border-slate-100 bg-white">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-xs text-slate-400 uppercase tracking-widest">© 2025 Rui Tammy Huang, Ph.D.</p>
-            <div class="flex gap-8 text-xl text-slate-300">
-                <a href="www.linkedin.com/in/rui-tammy-huang-367384b2" target="_blank" class="hover:text-blue-600 transition" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.facebook.com/rui.tammy.huang" target="_blank" class="hover:text-blue-600 transition" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+    <footer class="py-16 px-6 border-t border-slate-100 bg-white">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-xs text-slate-400 font-bold uppercase tracking-[0.2em]">© 2025 Rui Tammy Huang, Ph.D.</p>
+            <div class="flex gap-10 text-xl text-slate-300">
+                <a href="https://www.linkedin.com/in/rui-tammy-huang-367384b2" target="_blank" class="hover:text-blue-600 transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/rui.tammy.huang" target="_blank" class="hover:text-blue-600 transition"><i class="fa-brands fa-facebook"></i></a>
                 <a href="mailto:rui.huang@coe.ufl.edu" class="hover:text-blue-600 transition"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
