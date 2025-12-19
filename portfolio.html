@@ -12,11 +12,22 @@
         h1, h2, h3 { font-family: 'Outfit', sans-serif; }
         .hero-gradient { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); }
         
-        /* Filter Button Active State */
         .filter-btn.active {
             background-color: #3b82f6;
             color: white;
             box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3);
+        }
+        /* Style for multiple tags per card */
+        .tag-pill {
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            display: inline-block;
+            margin-right: 4px;
+            margin-bottom: 6px;
         }
     </style>
 </head>
@@ -44,62 +55,79 @@
     <main class="py-16 max-w-6xl mx-auto px-6">
         
         <div class="flex flex-wrap justify-center gap-3 mb-16">
-            <button class="filter-btn active px-6 py-2 rounded-full text-sm font-bold border border-slate-200 transition" onclick="filterSelection('all')">All Projects</button>
-            <button class="filter-btn px-6 py-2 rounded-full text-sm font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('xr')">Immersive Tech (XR)</button>
-            <button class="filter-btn px-6 py-2 rounded-full text-sm font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('games')">Game-Based Learning</button>
-            <button class="filter-btn px-6 py-2 rounded-full text-sm font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('cs-ed')">Instructional Design</button>
-            <button class="filter-btn px-6 py-2 rounded-full text-sm font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('research')">AI-Enhanced Learning</button>
+            <button class="filter-btn active px-5 py-2 rounded-full text-xs font-bold border border-slate-200 transition" onclick="filterSelection('all')">All Projects</button>
+            <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('xr')">Immersive Tech</button>
+            <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('games')">Game-Based Learning</button>
+            <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('research')">AI-Enhanced Learning</button>
+            <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('lxd')">Learning Experience Design</button>
+            <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('codesign')">Co-design</button>
+            <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('participatory')">Participatory Design</button>
+            <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('diff')">Differentiated Learning</button>
+            <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('personal')">Personalized Learning</button>
+            <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('dbr')">Design-Based Research</button>
+            <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold border border-slate-200 transition hover:border-blue-300" onclick="filterSelection('action')">Action Research</button>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             
-            <div class="project-card xr all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
+            <div class="project-card xr lxd codesign dbr all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
                 <img src="images/Phoenix_Gathering.png" alt="Project PHOENIX" class="h-56 w-full object-cover">
                 <div class="p-8">
-                    <span class="text-blue-600 font-bold text-[10px] uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">Extended Reality</span>
-                    <h3 class="text-xl font-bold mt-5 mb-3 text-slate-900">Project PHOENIX</h3>
-                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">Project PHOENIX is a collaborative initiative dedicated to pioneering participatory, 
-                        human-centered methods for the design of inclusive extended reality (XR) environments for and with autistic users.
-                    </p>
+                    <div class="mb-4">
+                        <span class="tag-pill bg-blue-50 text-blue-600">Immersive Tech</span>
+                        <span class="tag-pill bg-slate-50 text-slate-500">Learning Experience Design</span>
+                        <span class="tag-pill bg-slate-50 text-slate-500">Co-Design</span>
+                        <span class="tag-pill bg-slate-50 text-slate-500">Design-Based Research</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Project PHOENIX</h3>
+                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">Project PHOENIX is a collaborative initiative dedicated to pioneering participatory, human-centered methods for the design of inclusive extended reality (XR) environments for and with autistic users.</p>
                     <a href="#" class="text-blue-600 text-sm font-bold hover:underline">View Case Study →</a>
                 </div>
             </div>
 
-            <div class="project-card games all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
+            <div class="project-card games lxd participatory dbr all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
                 <img src="images/Future_Writers_2_FutureLand.png" alt="Future Writers" class="h-56 w-full object-cover">
                 <div class="p-8">
-                    <span class="text-teal-600 font-bold text-[10px] uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-full">Game-Based Learning</span>
-                    <h3 class="text-xl font-bold mt-5 mb-3 text-slate-900">Future Writers</h3>
-                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">Future Writers is an immersive 3D virtual world intervention designed to foster meaningful 
-                        social interaction and language-related episodes among international English language learners through task-based gameplay.
-                    </p>
+                    <div class="mb-4">
+                        <span class="tag-pill bg-teal-50 text-teal-600">Game-Based Learning</span>
+                        <span class="tag-pill bg-slate-50 text-slate-500">Learning Experience Design</span>
+                        <span class="tag-pill bg-slate-50 text-slate-500">Participatory Design</span>
+                        <span class="tag-pill bg-slate-50 text-slate-500">Design-Based Research</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Future Writers</h3>
+                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">Future Writers is an immersive 3D virtual world intervention designed to foster meaningful social interaction and language-related episodes among international English language learners through task-based gameplay.</p>
                     <a href="#" class="text-teal-600 text-sm font-bold hover:underline">View Case Study →</a>
                 </div>
             </div>
 
-            <div class="project-card cs-ed all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
+            <div class="project-card lxd diff action all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
                 <img src="images/CS_Differentiated_Learning.png" alt="CS Ed" class="h-56 w-full object-cover">
                 <div class="p-8">
-                    <span class="text-rose-600 font-bold text-[10px] uppercase tracking-widest bg-rose-50 px-3 py-1 rounded-full">Instructional Design</span>
-                    <h3 class="text-xl font-bold mt-5 mb-3 text-slate-900">Differentiated CS Learning</h3>
-                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">Differentiated CS Learning is a multi-tiered instructional design project within 
-                        Programming Foundations courses that offers three distinct difficulty levels for programming assignments to accommodate learners' 
-                        diverse prior knowledge, professional experiences, and individual learning needs.</p>
+                    <div class="mb-4">
+                        <span class="tag-pill bg-rose-50 text-rose-600">Learning Experience Design</span>
+                        <span class="tag-pill bg-slate-50 text-slate-500">Differentiated Learning</span>
+                        <span class="tag-pill bg-slate-50 text-slate-500">Action Research</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Differentiated CS Learning</h3>
+                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">A multi-tiered instructional design project within Programming Foundations courses that offers three distinct difficulty levels for programming assignments to accommodate learners' diverse needs.</p>
                     <a href="#" class="text-rose-600 text-sm font-bold hover:underline">View Case Study →</a>
                 </div>
             </div>
 
-            <div class="project-card research all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
+            <div class="project-card research lxd personal action all bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100">
                 <div class="h-56 bg-slate-100 flex items-center justify-center p-6">
-                    <i class="fa-solid fa-chart-line text-5xl text-blue-200"></i>
+                    <i class="fa-solid fa-microchip text-5xl text-blue-200"></i>
                 </div>
                 <div class="p-8">
-                    <span class="text-slate-500 font-bold text-[10px] uppercase tracking-widest bg-slate-100 px-3 py-1 rounded-full">AI-Enhanced Learning</span>
-                    <h3 class="text-xl font-bold mt-5 mb-3 text-slate-900">Learning CS with AI</h3>
-                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">Learning CS with AI is a research-informed innovative instructional design project that explores 
-                        the diverse pedagogical roles of generative AI through the design and evaluation of multiple AI-assisted learning activities 
-                        in computer science education.</p>
-                    <a href="#" class="text-slate-600 text-sm font-bold hover:underline">View Case Study →</a>
+                    <div class="mb-4">
+                        <span class="tag-pill bg-indigo-50 text-indigo-600">AI-Enhanced Learning</span>
+                        <span class="tag-pill bg-slate-50 text-slate-500">Learning Experience Design</span>
+                        <span class="tag-pill bg-slate-50 text-slate-500">Personalized Learning</span>
+                        <span class="tag-pill bg-slate-50 text-slate-500">Action Research</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900">Learning CS with AI</h3>
+                    <p class="text-sm text-slate-500 mb-6 leading-relaxed">A research-informed innovative project exploring generative AI roles through multiple AI-assisted activities in computer science education.</p>
+                    <a href="#" class="text-indigo-600 text-sm font-bold hover:underline">View Case Study →</a>
                 </div>
             </div>
 
@@ -107,7 +135,7 @@
     </main>
 
     <footer class="py-16 px-6 border-t border-slate-100 bg-white">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <p class="text-xs text-slate-400 font-bold uppercase tracking-[0.2em]">© 2025 Rui Tammy Huang, Ph.D.</p>
             <div class="flex gap-10 text-xl text-slate-300">
                 <a href="https://www.linkedin.com/in/rui-tammy-huang-367384b2" target="_blank" class="hover:text-blue-600 transition"><i class="fa-brands fa-linkedin"></i></a>
@@ -121,15 +149,14 @@
         function filterSelection(c) {
             var x, i;
             x = document.getElementsByClassName("project-card");
-            if (c == "all") c = "all";
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
-                if (x[i].className.indexOf(c) > -1) {
+                // Match the class accurately
+                if (c == "all" || x[i].classList.contains(c)) {
                     x[i].style.display = "block";
                 }
             }
             
-            // Toggle active button style
             var btns = document.getElementsByClassName("filter-btn");
             for (var j = 0; j < btns.length; j++) {
                 btns[j].classList.remove("active");
