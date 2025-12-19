@@ -11,7 +11,16 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.01em; }
         h1, h2 { font-family: 'Outfit', sans-serif; }
         .hero-gradient { background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); }
-        .cv-container { height: 1000px; width: 100%; border-radius: 1.5rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0; }
+        /* The container sets the physical space on the page */
+        .cv-container { 
+            height: 1000px; 
+            width: 100%; 
+            border-radius: 1.5rem; 
+            overflow: hidden; 
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); 
+            border: 1px solid #e2e8f0; 
+            background-color: #f8fafc;
+        }
     </style>
 </head>
 <body class="text-slate-700 bg-white">
@@ -31,7 +40,9 @@
     <header class="hero-gradient py-16 px-6 border-b border-slate-50 text-center">
         <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Curriculum Vitae</h1>
         <div class="flex justify-center gap-4">
-            <a href="YOUR_GOOGLE_DOC_LINK/export?format=pdf" class="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-500/20">
+            <a href="https://docs.google.com/document/d/1vQClq1fgWBz6lp1jelq2LYx3V6d9BnopOy9O_Kc7Q/export?format=pdf" 
+               target="_blank"
+               class="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-500/20">
                 <i class="fa-solid fa-file-pdf"></i> Download PDF
             </a>
         </div>
@@ -39,7 +50,11 @@
 
     <main class="py-12 max-w-5xl mx-auto px-6">
         <div class="cv-container">
-            <iframe src="https://docs.google.com/document/d/e/2PACX-1vQClq1fgWBz6lp1jelq2LYx3V6d9BnopOy9O_Kc7Q90V0Q-cadDK63WCjJxvkN9vn7ceK9E5yALDkhr/pub?embedded=true"></iframe>
+            <iframe 
+                src="https://docs.google.com/document/d/e/2PACX-1vQClq1fgWBz6lp1jelq2LYx3V6d9BnopOy9O_Kc7Q90V0Q-cadDK63WCjJxvkN9vn7ceK9E5yALDkhr/pub?embedded=true"
+                class="w-full h-full"
+                frameborder="0">
+            </iframe>
         </div>
         
         <p class="mt-6 text-center text-sm text-slate-400 italic">
@@ -48,11 +63,12 @@
     </main>
 
     <footer class="py-16 px-6 border-t border-slate-100 bg-white">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center">
             <p class="text-xs text-slate-400 font-bold uppercase tracking-[0.2em]">© 2025 Rui Tammy Huang, Ph.D.</p>
             <div class="flex gap-10 text-xl text-slate-300">
                 <a href="https://www.linkedin.com/in/rui-tammy-huang-367384b2" target="_blank" class="hover:text-blue-600 transition"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="mailto:rui.huang@coe.ufl.edu" class="hover:text-blue-600 transition"><i class="fa-solid fa-envelope"></i></a>
+                <a href="portfolio.html" class="hover:text-blue-600 transition" title="Back to Portfolio"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
         </div>
     </footer>
